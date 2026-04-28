@@ -1,0 +1,36 @@
+// 1. Use @use instead of @import
+// This loads the files as "modules"
+@use '../base/mixins' as m;
+@use '../base/colors' as c;
+
+// 1. Button Containers
+%btn-group-shared {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 0;
+}
+
+// 2. Button Groups
+.btn-group    { @extend %btn-group-shared; text-align: center; }
+.btn-group-lt { @extend %btn-group-shared; text-align: left; padding-left: 10px; }
+.btn-group-rt { @extend %btn-group-shared; text-align: right; padding-right: 10px; }
+
+// 3. Base Button Tag
+// Note: We use 'm.' and 'c.' prefixes because of the '@use ... as' lines above
+button {
+    font-size: medium;
+    @include m.btn(c.$detail); 
+}
+
+// 4. Contextual Classes
+.btn-success { @include m.btn(c.$success); }
+.btn-primary { @include m.btn(c.$primary); }
+.btn-warning { @include m.btn(c.$warning); }
+.btn-danger  { @include m.btn(c.$danger);  }
+.btn-detail  { @include m.btn(c.$detail);  }
+
+// 5. The Redesigned Outline
+.btn-outline {
+    @include m.btn(c.$primary, $outline: true);
+    border-width: 2px;
+}

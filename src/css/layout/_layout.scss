@@ -1,0 +1,75 @@
+// 1. Use @use instead of @import
+@use "sass:math"; // Required for modern division
+@use "../base/mixins" as m; // 'as m' lets you use m.btn() instead of mixins.btn()
+@use "../base/colors" as c;
+
+header, section, nav, div {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 5px 10px;
+}
+
+.row-content{
+    margin: 40px 0;
+    padding: 40px 0;
+}
+
+main{
+    display: block;
+}
+
+.hero {
+    display: block;
+    height: 100vh;
+    align-items: last baseline ;
+    background-size: cover;
+}
+
+
+section{
+    padding: 60px 0;
+    text-transform: capitalize;
+    .section-title{
+        font-size: 3em;
+    }
+    .scetion-info{
+        font-size: 1em;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    // Use a loop to generate columns! It's much cleaner for modern Sass.
+    @for $i from 1 through 12 {
+        .col-#{$i} { 
+            width: math.div(100%, 12) * $i; 
+        }
+    }
+
+    @include m.respond(mobile) {
+        @for $i from 1 through 12 {
+            .col-xs-#{$i} { width: math.div(100%, 12) * $i; }
+        }
+    }
+
+    @include m.respond(tablet) {
+        @for $i from 1 through 12 {
+            .col-md-#{$i} { width: math.div(100%, 12) * $i; }
+        }
+    }
+
+    @include m.respond(laptop) {
+        @for $i from 1 through 12 {
+            .col-lg-#{$i} { 
+                width: math.div(100%, 12) * $i; 
+            }
+        }
+    }
+}

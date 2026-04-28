@@ -1,0 +1,60 @@
+// 1. Use @use and give it a short name like 'm'
+@use "../base/mixins" as m;
+@use '../base/colors' as c;
+
+header{
+    z-index: 1000;
+    position: fixed;
+    box-shadow: rgba(12, 3, 3, 0.514) 0px 25px 50px -12px;
+    .btn-menu{
+        position: relative;
+        top: 16px;
+        transform: scale(2,1)
+    }
+    .nav-bars{
+        @include m.grid-container (4);
+        justify-items: space-between;
+        align-items: center;
+        .nav-item{
+            margin: 10px 0;
+            justify-self: end;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 1s;
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+        }
+    }
+    @include m.respond(laptop){
+        .nav-item{
+            justify-self: center;
+        }
+    }
+    @include m.respond(mobile){
+        height: auto;
+        padding: 8px 0;
+        nav{
+            margin-top: 10px;
+            height: 90vh;
+        }
+        .nav-bars{
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            .nav-item{
+                display: block;
+                padding: 20px;
+                justify-self: start;
+                border-bottom: 1px solid gainsboro;
+            }
+        }
+    }
+}
+.logo{
+    display: block;
+    font-size: 1.4em;
+    width: max-content;
+    
+}
