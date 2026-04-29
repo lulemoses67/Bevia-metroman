@@ -1,17 +1,13 @@
-import Footer from "./componets/Footer";
-import Navbar from "./componets/Navbar";
-import Home from "./pages/Home";
-
+import MainComponent from "./MainComponent";
 
 const App = () => {
 
     return (
         <>
-            <Navbar />
-            <Home />
-            <Footer />
+            <MainComponent />
         </>
-    );
+    )
+   ;
 }
 
 export default App;

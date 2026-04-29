@@ -3,15 +3,15 @@
 const Footer = () => {
     return (
         <>
-            <footer className="bg-dark reveal fade-in text-white">
+            <footer className="bg-dark reveal fade-in text-white text-center">
                 <section>
                     <div className="container">
-                        <h1>Hultech</h1>
-                        <p>We are a tech company based in Kampala Uganda specialised in web development (websites, web application, mobile apps and other customs software).</p>
+                        <h1>Brevia-Metroman</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem delectus dolorum dolore, error, cupiditate corporis quam deleniti incidunt magni consequatur accusantium? Itaque corrupti nisi eos voluptatum, velit libero? Eveniet, nemo!.</p>
                     </div>
-                </section><hr />
+                </section>
                 <div className="container">
-                    <p>2026 all rights reserved © hultech <a href="https://github.com/lulemoses67/Hultech"> Source Code</a></p>
+                    <p>Web App designed by <a href="https://github.com/lulemoses67/Hultech"> Hultech</a></p>
                 </div>
             </footer>
         </>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
 
@@ -31,7 +32,7 @@ const Navbar = (props) => {
     
     const NavItem = (props) => {
         return (
-            <a className="nav-item" href={props.link} onClick={toogleNav}> <i className={props.icon}></i> <span className="d-none-md d-none-lg">{props.name}</span> </a>
+            <NavLink className="nav-item" to={props.link} onClick={toogleNav}> <i className={props.icon}></i> <span className="d-none-md d-none-lg">{props.name}</span> </NavLink>
         );
     }
     return (
