@@ -7,7 +7,7 @@ const Footer = () => {
                 <section>
                     <div className="container">
                         <h1>Brevia-Metroman</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem delectus dolorum dolore, error, cupiditate corporis quam deleniti incidunt magni consequatur accusantium? Itaque corrupti nisi eos voluptatum, velit libero? Eveniet, nemo!.</p>
+                        <p>Welcome to Brevia, where we believe a scent is more than just a fragrance—it is a signature of your identity. Based in the heart of Masaka Town and reaching enthusiasts worldwide through our online boutique, we specialize in the creation, distribution, and retail of premium perfumes, colognes, and essential oils.</p>
                     </div>
                 </section>
                 <div className="container">

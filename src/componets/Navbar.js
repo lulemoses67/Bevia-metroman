@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     // 1. Initialize state based on current window width
     const [isNavOpen, setIsNavOpen] = useState(window.innerWidth > 539);
@@ -35,6 +35,16 @@ const Navbar = (props) => {
             <NavLink className="nav-item" to={props.link} onClick={toogleNav}> <i className={props.icon}></i> <span className="d-none-md d-none-lg">{props.name}</span> </NavLink>
         );
     }
+
+    const toggleModal = () => {
+        const modal = document.querySelector(".modal-overlay");
+      
+        if (modal) {
+          modal.style.display =
+            modal.style.display === "flex" ? "none" : "flex";
+        }
+      };
+
     return (
         <>
             <header className="bg-light row align-center text-dark">
@@ -54,7 +64,7 @@ const Navbar = (props) => {
                             <ol className="nav-bars text-purple">
                                 <NavItem link="/" icon="fa-solid fa-home" name="Home"/>
                                 <NavItem link="/about" icon="fa-solid fa-circle-info" name="About"/>
-                                <NavItem link="/products" icon="fa-solid fa-cart-arrow-down" name="Products"/>
+                                <NavLink className="nav-item" to={'/'} onClick={toggleModal}> <i className="fa-solid fa-shopping-cart"></i> <span className="d-none-md d-none-lg"></span> </NavLink>
                                 <NavItem link="/contact" icon="fa-solid fa-envelope" name="Contact"/>
                             </ol>
                         </nav>}
