@@ -7,9 +7,9 @@ header{
     position: fixed;
     box-shadow: rgba(12, 3, 3, 0.514) 0px 25px 50px -12px;
     .btn-menu{
-        position: relative;
-        top: 16px;
-        transform: scale(2,1)
+        display: block;
+        padding-left: 5px;
+        transform: scale(1,1)
     }
     .nav-bars{
         @include m.grid-container (4);

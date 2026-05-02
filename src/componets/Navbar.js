@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import toggleModal from './Utlilities';
 
 const Navbar = () => {
 
@@ -36,36 +37,32 @@ const Navbar = () => {
         );
     }
 
-    const toggleModal = () => {
-        const modal = document.querySelector(".modal-overlay");
-      
-        if (modal) {
-          modal.style.display =
-            modal.style.display === "flex" ? "none" : "flex";
-        }
-      };
+    
 
     return (
         <>
             <header className="bg-light row align-center text-dark">
             <div className="container">
                 <div className="row align-center">
-                    <div className="col-xs-11 col-lg-10 col-md-8 row align-center">
+                    <div className="col-xs-10 col-lg-9 col-md-8 row align-center">
                         <h1 className="logo text-purple">Brevia<span className="small text-dark">Metroman</span></h1> 
                     </div>
-                    <div className="col-xs-1  d-none-md d-none-lg">
-                        <div className="btn-menu" onClick={toogleNav}>   
-                            {!isNavOpen && <i className="fa fa-bars" ></i>}
-                            {isNavOpen && <i className="fa fa-close" ></i>}
-                        </div>
+                    <div className="col-xs-1 d-none-md d-none-lg">
+                        <p className="text-success" onClick={toggleModal}><i className="fa-solid fa-shopping-cart" ></i></p>
                     </div>
-                    <div className="col-xs-12 s col-md-4 col-lg-2">
+                    <div className="col-xs-1  d-none-md d-none-lg">
+                        <p className="btn-menu text-primary" onClick={toogleNav}>   
+                            {!isNavOpen && <span><i className="fa-solid fa-bars" ></i></span>}
+                            {isNavOpen && <i className="fa-solid fa-close" ></i>}
+                        </p>
+                    </div>
+                    <div className="col-xs-12 s col-md-4 col-lg-3">
                     {isNavOpen && <nav>
                             <ol className="nav-bars text-purple">
                                 <NavItem link="/" icon="fa-solid fa-home" name="Home"/>
                                 <NavItem link="/about" icon="fa-solid fa-circle-info" name="About"/>
-                                <NavLink className="nav-item" to={'/'} onClick={toggleModal}> <i className="fa-solid fa-shopping-cart"></i> <span className="d-none-md d-none-lg"></span> </NavLink>
                                 <NavItem link="/contact" icon="fa-solid fa-envelope" name="Contact"/>
+                                <li className="nav-item text-success" onClick={toggleModal}> <i className="fa-solid fa-shopping-cart"></i><span className="d-none-md d-none-lg">Your Cart</span></li>
                             </ol>
                         </nav>}
                     </div>

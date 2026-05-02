@@ -24,11 +24,37 @@ const About = () => {
                     <p><b>Essential Oils</b> Pure extracts used for their natural aromatic properties and as foundations for custom blends.</p>
                     <p><b>Artisanal & Custom Scents</b> Bespoke fragrances crafted through their "three distinct pillars" of expertise, blending art and science to create emotional resonance.</p>
                 </Section>
-                <Section title="Our Team" info="Check out Team">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis ea suscipit nisi eius voluptatibus dolor dolores? Quas debitis eum quisquam distinctio dolorem non quaerat iste, nesciunt, fuga a minima.</p>
-                </Section>
                 <Section title="T&Cs" info="Terms and Conditions">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis ea suscipit nisi eius voluptatibus dolor dolores? Quas debitis eum quisquam distinctio dolorem non quaerat iste, nesciunt, fuga a minima.</p>
+                    <div>
+                        <h3>1. Ordering Process</h3>
+                        <p>By placing an order on Brevia-Metroman, you understand that our website acts as a catalog.</p>
+                        <ul>
+                            <li>Once you select your items, your order request is sent directly to us via WhatsApp.</li>
+                            <li>An order is only considered confirmed after a member of our team contacts you via WhatsApp or phone call to verify availability and delivery details.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>2. Delivery Locations & Pricing</h3>
+                        <p>We currently offer delivery services to the following locations:</p>
+                        <ul>
+                            <li>Kampala City</li>
+                            <li>Mbarara City</li>
+                            <li>Masaka City</li>
+                        </ul>
+                        <p>Delivery Fees:</p>
+                        <ul>
+                            <li>A flat rate of 5,000 UGX applies to all deliveries within the City Center of the locations listed above.</li>
+                            <li>Deliveries outside the immediate city centers may attract an additional fee, which will be communicated and agreed upon during the confirmation call.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>3. Payment</h3>
+                        <p>Payment terms (Mobile Money or Cash on Delivery) will be finalized during the order confirmation process on WhatsApp. Please do not make any payments until your order has been confirmed by our official representative.</p>
+                    </div>
+                    <div>
+                        <h3>4.  Delivery Timelines</h3>
+                        <p>While we strive for same-day or next-day delivery, specific delivery times depend on courier availability and will be communicated during your WhatsApp consultation.</p>
+                    </div>
                 </Section>
             </Page>
         </>

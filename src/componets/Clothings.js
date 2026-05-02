@@ -1,18 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
-import Section from '../componets/Section';
-import Bloglist from '../componets/Bloglist';
-import toggleModal from '../componets/Utlilities';
+import Section from './Section';
+import Bloglist from './Bloglist';
+import toggleModal from './Utlilities';
 
-const Product = () => {
+const Clothings = () => {
 
     const [cart, setCart] = useState([]);
 
     // Products based on Brevia's core pillars
     const products = [
-        { id: 1, name: "Brevia Designer Cologne", price: 120, description: "Precision chemistry luxury blend" },
-        { id: 2, name: "Pure Essential Oil", price: 25, description: "100% natural aromatic extract" },
-        { id: 3, name: "Artisanal Scent Mist", price: 45, description: "Emotional resonance series" }
+        { id: 1, name: "Blue demin jeans", price: 120, description: "Precision chemistry luxury blend" },
+        { id: 2, name: "Plain white", price: 25, description: "100% natural aromatic extract" },
+        { id: 3, name: "Nike Jumper", price: 45, description: "Emotional resonance series" }
     ];
 
     const addToCart = (product) => {
@@ -57,7 +57,7 @@ const Product = () => {
         const message = `Hello Brevia! I'd like to place an order:%0A%0A${itemList}%0A%0A*Total: $${total.toFixed(2)}*`;
       
         // Open the WhatsApp link
-        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        window.open(`https://wa.me${phoneNumber}?text=${message}`, '_blank');
       };
       
 
@@ -65,7 +65,7 @@ const Product = () => {
 
     return (
         <>
-            <Section title={'Perfumes'} info={'All perfumes in stock'} >
+            <Section title={'Men Fashion'} info={'Get the lastest Trend'} >
                 <Bloglist products={products}  myFunc={addToCart}/>
             </Section>
             <div className="modal-overlay">
@@ -106,4 +106,4 @@ const Product = () => {
     );
 }
 
-export default Product;
+export default Clothings;
