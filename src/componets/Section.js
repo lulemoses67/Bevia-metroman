@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section = ({title,  info, children, class_name }) => {
     return (
-        <section className={"section-container " + class_name}>
+        <section className={"section-container reveal active fade-in " + class_name}>
             <div className="container">
                 <div className="text-center">
                     <h2 className='section-title'>{title}</h2>

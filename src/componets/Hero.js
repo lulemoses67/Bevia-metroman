@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Hero = (props) => {
@@ -9,7 +10,7 @@ const Hero = (props) => {
                     <h1 className='x4'>{props.title}</h1>
                     <p>{props.body}</p>
                     <div className="btn-group-rt">
-                    <a href={'./about'} className='btn-primary'>About us</a>
+                    <Link href={'./about'} className='btn-primary'>About us</Link>
                     </div>
                 </div>
             </div>

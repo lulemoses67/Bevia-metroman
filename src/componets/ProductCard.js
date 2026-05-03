@@ -5,8 +5,8 @@ const ProductCard = ({ itm, onAddItem }) => {
         <div className='product_card'>
             <img src={itm.imgUrl} alt={itm.name} />
             <h4>{itm.name}</h4>
-            <p>{itm.price} UGX</p>
-            <p><small>{itm.description}</small></p>
+            <p>{itm.Price} UGX</p>
+            <p><small>{itm.cat}</small></p>
             <button onClick={() => onAddItem(itm)} className="btn-success">Add to Cart</button>
         </div>
     );

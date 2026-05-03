@@ -3,17 +3,12 @@ import { useState } from 'react';
 import Section from './Section';
 import Bloglist from './Bloglist';
 import toggleModal from './Utlilities';
+import useFetch from './useFetch';
 
 const Clothings = () => {
 
     const [cart, setCart] = useState([]);
-
-    // Products based on Brevia's core pillars
-    const products = [
-        { id: 1, name: "Blue demin jeans", price: 120, description: "Precision chemistry luxury blend" },
-        { id: 2, name: "Plain white", price: 25, description: "100% natural aromatic extract" },
-        { id: 3, name: "Nike Jumper", price: 45, description: "Emotional resonance series" }
-    ];
+    const { data: perfumes } = useFetch('perfumes');
 
     const addToCart = (product) => {
         setCart((prev) => {
@@ -66,7 +61,7 @@ const Clothings = () => {
     return (
         <>
             <Section title={'Men Fashion'} info={'Get the lastest Trend'} >
-                <Bloglist products={products}  myFunc={addToCart}/>
+            {perfumes && <Bloglist products={perfumes}  myFunc={addToCart}/>}
             </Section>
             <div className="modal-overlay">
               <div className="modal">
