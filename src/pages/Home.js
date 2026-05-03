@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero bgimg="https://images.pexels.com/photos/34143829/pexels-photo-34143829.jpeg" title="Welcome to Brevia, where we believe a scent is more than just a fragrance" body="it is a signature of your identity"/>
+      <Hero bgimg="https://images.pexels.com/photos/33295344/pexels-photo-33295344.jpeg" title="Designer Perfumes & Men's Fashion in Uganda" body="Welcome to Brevia-Metroman, where we believe a scent is more than just a fragrance—it is a signature of your identity. Shop premium scents and stylish clothing with fast delivery in Kampala, Masaka, and Mbarara."/>
       <br />
       
       <div className="btn-group">

@@ -3,17 +3,12 @@ import { useState } from 'react';
 import Section from '../componets/Section';
 import Bloglist from '../componets/Bloglist';
 import toggleModal from '../componets/Utlilities';
+import useFetch from '../componets/useFetch';
 
 const Product = () => {
 
     const [cart, setCart] = useState([]);
-
-    // Products based on Brevia's core pillars
-    const products = [
-        { id: 1, name: "Brevia Designer Cologne", price: 120, description: "Precision chemistry luxury blend" },
-        { id: 2, name: "Pure Essential Oil", price: 25, description: "100% natural aromatic extract" },
-        { id: 3, name: "Artisanal Scent Mist", price: 45, description: "Emotional resonance series" }
-    ];
+    const { data: perfumes } = useFetch('perfumes');
 
     const addToCart = (product) => {
         setCart((prev) => {
@@ -57,7 +52,8 @@ const Product = () => {
         const message = `Hello Brevia! I'd like to place an order:%0A%0A${itemList}%0A%0A*Total: $${total.toFixed(2)}*`;
       
         // Open the WhatsApp link
-        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+
       };
       
 
@@ -65,8 +61,8 @@ const Product = () => {
 
     return (
         <>
-            <Section title={'Perfumes'} info={'All perfumes in stock'} >
-                <Bloglist products={products}  myFunc={addToCart}/>
+            <Section title={'Perfumes and Oils'} info={'All perfumes and oils in stock'} >
+                {perfumes && <Bloglist products={perfumes}  myFunc={addToCart}/>}
             </Section>
             <div className="modal-overlay">
               <div className="modal">

@@ -44,11 +44,11 @@ const Navbar = () => {
             <header className="bg-light row align-center text-dark">
             <div className="container">
                 <div className="row align-center">
-                    <div className="col-xs-10 col-lg-9 col-md-8 row align-center">
+                    <div className="col-xs-9 col-lg-9 col-md-8 row align-center">
                         <h1 className="logo text-purple">Brevia<span className="small text-dark">Metroman</span></h1> 
                     </div>
-                    <div className="col-xs-1 d-none-md d-none-lg">
-                        <p className="text-success" onClick={toggleModal}><i className="fa-solid fa-shopping-cart" ></i></p>
+                    <div className="col-xs-2 d-none-md d-none-lg">
+                        <button className="btn-outline" onClick={toggleModal}><i className="fa-solid fa-shopping-cart" ></i></button>
                     </div>
                     <div className="col-xs-1  d-none-md d-none-lg">
                         <p className="btn-menu text-primary" onClick={toogleNav}>   

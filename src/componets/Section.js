@@ -5,7 +5,7 @@ const Section = ({title,  info, children, class_name }) => {
         <section className={"section-container " + class_name}>
             <div className="container">
                 <div className="text-center">
-                    <h3 className='section-title'>{title}</h3>
+                    <h2 className='section-title'>{title}</h2>
                     <p className='section-info text-primary'>[{info}]</p>
                 </div>
                 <div className="row-content">
